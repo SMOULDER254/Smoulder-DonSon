@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Artist Name] Official Website</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+    header, nav, footer { background: #3fb7ee; color: #180e0ede; text-align: center; padding: 1em; }
+    nav a { color: #021405; margin: 0 10px; text-decoration: none; }
+    section { padding: 2em; }
+    h1, h2 { color: #f50a0a; }
+    footer { font-size: 0.9em; }
+
+    .banner { background: rgb(0, 255, 34); color: #5b0ab8; padding: 20px; text-align: center; font-size: 1.5em; }
+    #countdown { font-size: 1.2em; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="me.png" alt="Smoulder DonSon" height="300" style="border-radius: 10px; margin: 20px 0;">
+  <h1>Welcome to the Official Website of Smoulder DonSon</h1>
+  <p>Music is on the way—stay tuned for the sound of Afrobeat.</p>
+</header>
+
+<div class="banner">
+  🚀 Debut Release Coming Soon!
+  <div id="countdown"></div>
+</div>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#music">Music</a>
+  <a href="#tour">Tour</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About</h2>
+
+  <p>Every artist has a beginning, and this is mine. I’m  Smoulder DonSon, a passionate Afrobeat musician inspired by growing listening to music , having the emotions for writing songs and wanting to leave a legacy. 
+  My journey is about creating music that connects deeply with people, telling stories through rhythm and melody. 
+  This site will grow alongside my career—soon you’ll find tracks, videos, and tour dates right here.</p>
+</section>
+
+<section id="music">
+  <h2>Music</h2>  <img src="me at studio session.png" alt="In the Studio" height="400" style="border-radius: 10px; margin-bottom: 20px;">  <p>Music is coming soon! I’m currently working on my debut release, and I can’t wait to share it with you. 
+  In the meantime, join the mailing list or follow me on social media to get notified the moment new songs drop.</p>
+</section>
+
+<section id="tour">
+  <h2>Tour</h2>
+  <img src="Smiling in the park at midday.png" alt="Smiling in the Park" height="400" style="border-radius: 10px; margin-bottom: 20px;">
+  <p>No shows announced yet—but live performances are part of the plan. Keep an eye on this page for updates on gigs, festivals, and appearances. 
+  If you’d like to book me for an event, please reach out through the contact page.</p>
+</section>
+
+<section id="gallery">
+  <h2>Gallery</h2>
+  <p>Even before the music arrives, you can get a glimpse of the journey. Browse photos from the studio, creative shoots, and behind-the-scenes moments. 
+  More visuals will be added as projects unfold.</p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>For bookings, collaborations, or general inquiries:</p>
+  <p><strong>Email:</strong> <a href="mailto:smoulderboy9@gmail.com">smoulderboy9@gmail.com</a></p>
+  <p><strong>Phone:</strong> +254114271901 | +254701534710</p>
+  <p><strong>Social Media:</strong> 
+    <a href="https://www.facebook.com/Smoulder DonSon" target="_blank">Facebook</a> | 
+    <a href="https://www.instagram.com/smoulderdonson/" target="_blank">Instagram</a> | 
+    <a href="https://twitter.com/SmoulderDonSon" target="_blank">Twitter</a>
+    <a href="https://www.youtube.com/@SmoulderDonSon" target="_blank">YouTube</a>
+  </p>
+
+</section>
+
+<footer>
+  <p>&copy; 2026 Smoulder DonSon. All rights reserved.</p>
+</footer>
+
+<script>
+  // Countdown Timer Script
+  const releaseDate = new Date("June 1, 2026 00:00:00").getTime(); // Set your release date here
+  const countdownElement = document.getElementById("countdown");
+
+  const timer = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = releaseDate - now;
+
+    if (distance < 0) {
+      clearInterval(timer);
+      countdownElement.innerHTML = "🎶 The music is live!";
+    } else {
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    }
+  }, 1000);
+</script>
+
+</body>
+</html>
